@@ -1,0 +1,9 @@
+{% if sigils_list %}
+    <ul>
+    {% for sigil in sigils_list %}
+        <li><a href="/sigils/{{ sigil.id }}/">{{ sigil.title }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No sigils here...</p>
+{% endif %}
