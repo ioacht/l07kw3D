@@ -9,6 +9,6 @@ class Sigil(models.Model):
     image = models.ImageField(upload_to='uploads/sigils/%Y/%m/%d/')
     title = models.CharField(max_length=200)
     intent = models.TextField()
-    owner = models.OneToOneField(User)
+    owner = models.ForeignKey(User)
     def __str__(self):
         return  '{} | {}'.format(self.owner.username, self.title)
